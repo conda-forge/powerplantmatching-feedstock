@@ -1,6 +1,6 @@
 {% set name = "powerplantmatching" %}
-{% set version = "0.4.0" %}
-{% set sha256 = "f84b8b715e00a6bd74c340a04f71bbd00c6e959916e4b9d85e6450358cf2f84e" %}
+{% set version = "0.4.1" %}
+{% set sha256 = "f8adbd21322a9ae78a412c62bd31bc9d54e498389ac305a405bda2a15bf06e94" %}
 
 package:
   name: "{{ name|lower }}"
@@ -17,7 +17,7 @@ build:
 
 requirements:
   host:
-    - python
+    - python >3.0
     - pip
   run:
     - numpy
