@@ -27,7 +27,7 @@ requirements:
     - pycountry
     - xlrd
     - seaborn
-    - pyyaml
+    - pyyaml >=5.1.0
     - requests
     - matplotlib
     - geopy
@@ -44,11 +44,11 @@ about:
   license_file: LICENSE
   summary: Toolset for generating and managing Power Plant Data
   description: |
-    This package provides ready-to-use power plant data for the European 
-    power system. Starting from openly available power plant datasets, 
-    the package cleans, standardizes and merges the input data to create 
-    a new combining dataset, which includes all the important information. 
-    The package allows to easily update the combined data as 
+    This package provides ready-to-use power plant data for the European
+    power system. Starting from openly available power plant datasets,
+    the package cleans, standardizes and merges the input data to create
+    a new combining dataset, which includes all the important information.
+    The package allows to easily update the combined data as
     soon as new input datasets are released.
   doc_url: https://github.com/FRESNA/powerplantmatching
   dev_url: https://github.com/FRESNA/powerplantmatching
