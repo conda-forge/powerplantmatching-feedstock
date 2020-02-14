@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vvv "
   noarch: python
 
@@ -29,7 +29,7 @@ requirements:
     - seaborn
     - pyyaml >=5.1.0
     - requests
-    - matplotlib
+    - matplotlib-base
     - geopy
     - entsoe-py
 
