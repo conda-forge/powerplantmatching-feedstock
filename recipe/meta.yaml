@@ -1,18 +1,18 @@
 {% set name = "powerplantmatching" %}
-{% set version = "0.4.3" %}
-{% set sha256 = "e26436e8c64386d044eb3d532314e4eaba782dd44ebe0765994d310032db140a" %}
+{% set version = "0.4.4" %}
+{% set sha256 = "9ff5266bf11d4119fd32a7781a0aec8abdc61264832b9de5dece9451678d425e" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vvv "
+  number: 0
+  script: '{{ PYTHON }} -m pip install . -vvv '
   noarch: python
 
 requirements:
