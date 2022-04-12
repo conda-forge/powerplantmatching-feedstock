@@ -17,9 +17,10 @@ build:
 
 requirements:
   host:
-    - python >=3,<3.9
+    - python >=3.6
     - pip
   run:
+    - python >=3.6
     - numpy
     - scipy
     - pandas >=0.23.0
