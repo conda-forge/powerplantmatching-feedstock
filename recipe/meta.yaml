@@ -1,10 +1,10 @@
 {% set name = "powerplantmatching" %}
-{% set version = "0.4.0" %}
-{% set sha256 = "f84b8b715e00a6bd74c340a04f71bbd00c6e959916e4b9d85e6450358cf2f84e" %}
+{% set version = "0.5.3" %}
+{% set sha256 = "fe6f9e1e0f346e3b5dcd92d7332de27406e28c41934649f599b29147ea84e6ce" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
@@ -12,26 +12,30 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vvv "
+  script: '{{ PYTHON }} -m pip install . -vvv '
   noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3,<3.9
     - pip
   run:
     - numpy
     - scipy
     - pandas >=0.23.0
     - networkx >=1.10
+    - six
     - pycountry
-    - xlrd
-    - seaborn
-    - pyyaml
+    - country_converter
     - requests
-    - matplotlib
     - geopy
     - entsoe-py
+    - seaborn
+    - matplotlib-base
+    - deprecation
+    - unidecode
+    - tqdm
+    - pyyaml >=5.1.0
 
 test:
   imports:
@@ -44,11 +48,11 @@ about:
   license_file: LICENSE
   summary: Toolset for generating and managing Power Plant Data
   description: |
-    This package provides ready-to-use power plant data for the European 
-    power system. Starting from openly available power plant datasets, 
-    the package cleans, standardizes and merges the input data to create 
-    a new combining dataset, which includes all the important information. 
-    The package allows to easily update the combined data as 
+    This package provides ready-to-use power plant data for the European
+    power system. Starting from openly available power plant datasets,
+    the package cleans, standardizes and merges the input data to create
+    a new combining dataset, which includes all the important information.
+    The package allows to easily update the combined data as
     soon as new input datasets are released.
   doc_url: https://github.com/FRESNA/powerplantmatching
   dev_url: https://github.com/FRESNA/powerplantmatching
