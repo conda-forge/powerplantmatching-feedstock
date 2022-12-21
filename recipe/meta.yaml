@@ -1,6 +1,6 @@
 {% set name = "powerplantmatching" %}
-{% set version = "0.5.4" %}
-{% set sha256 = "e1a65e42672817d646678e02d089c10a46a4f14b89948ef9e46da7744194e648" %}
+{% set version = "0.5.5" %}
+{% set sha256 = "3ec6636cf3950cf61a8cab0f9dd510a243e2b35a1395f359a414ae7922ba449c" %}
 
 package:
   name: {{ name|lower }}
