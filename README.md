@@ -3,15 +3,15 @@ About powerplantmatching-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/powerplantmatching-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/FRESNA/powerplantmatching
+Home: https://github.com/PyPSA/powerplantmatching
 
 Package license: GPL-3.0
 
 Summary: Toolset for generating and managing Power Plant Data
 
-Development: https://github.com/FRESNA/powerplantmatching
+Development: https://github.com/PyPSA/powerplantmatching
 
-Documentation: https://github.com/FRESNA/powerplantmatching
+Documentation: https://github.com/PyPSA/powerplantmatching
 
 This package provides ready-to-use power plant data for the European
 power system. Starting from openly available power plant datasets,
