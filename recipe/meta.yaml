@@ -7,43 +7,50 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/powerplantmatching-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: '{{ PYTHON }} -m pip install . -vvv '
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
+    - setuptools >=64
+    - setuptools-scm >=8
     - pip
   run:
-    - python >=3.6
+    - python >=3.9
     - numpy
     - scipy
-    - pandas >=0.23.0
+    - pandas >=0.24.0
     - networkx >=1.10
-    - six
     - pycountry
     - country_converter
-    - requests
-    - geopy
-    - entsoe-py
+    - xlrd
     - seaborn
-    - matplotlib-base
-    - deprecation
-    - unidecode
-    - tqdm
     - pyyaml >=5.1.0
+    - requests
+    - matplotlib-base
+    - geopy
+    - unidecode
+    - entsoe-py >=0.3.1
+    - deprecation
+    - tqdm
+    - openpyxl
 
 test:
   imports:
     - powerplantmatching
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: https://github.com/FRESNA/powerplantmatching
+  home: https://github.com/PyPSA/powerplantmatching
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE
@@ -55,8 +62,8 @@ about:
     a new combining dataset, which includes all the important information.
     The package allows to easily update the combined data as
     soon as new input datasets are released.
-  doc_url: https://github.com/FRESNA/powerplantmatching
-  dev_url: https://github.com/FRESNA/powerplantmatching
+  doc_url: https://github.com/PyPSA/powerplantmatching
+  dev_url: https://github.com/PyPSA/powerplantmatching
 
 extra:
   recipe-maintainers:
