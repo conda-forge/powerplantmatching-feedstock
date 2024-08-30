@@ -158,5 +158,6 @@ Feedstock Maintainers
 * [@FabianHofmann](https://github.com/FabianHofmann/)
 * [@coroa](https://github.com/coroa/)
 * [@davide-f](https://github.com/davide-f/)
+* [@fneum](https://github.com/fneum/)
 * [@lkstrp](https://github.com/lkstrp/)
 
