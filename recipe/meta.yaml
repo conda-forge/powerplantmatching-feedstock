@@ -1,6 +1,6 @@
 {% set name = "powerplantmatching" %}
-{% set version = "0.7.1" %}
-{% set sha256 = "48826ff4eafc7918546e027a3ea61b4e669b28f1df48557366a062599241932a" %}
+{% set version = "0.8.0" %}
+{% set sha256 = "d2fdbcf32c63d1045faff3475ace9e0d4dc563c18a30d819c5d11202fa62b8cd" %}
 
 package:
   name: {{ name|lower }}
@@ -52,9 +52,9 @@ test:
 
 about:
   home: https://github.com/PyPSA/powerplantmatching
-  license: GPL-3.0
-  license_family: GPL
-  license_file: LICENSE
+  license: MIT
+  license_family: MIT
+  license_file: LICENSES/MIT.txt
   summary: Toolset for generating and managing Power Plant Data
   description: |
     This package provides ready-to-use power plant data for the European
