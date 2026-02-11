@@ -1,6 +1,6 @@
 {% set name = "powerplantmatching" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "d2fdbcf32c63d1045faff3475ace9e0d4dc563c18a30d819c5d11202fa62b8cd" %}
+{% set version = "0.8.1" %}
+{% set sha256 = "dc38658b86b6599a99a53cdbeb1e39167bd8aa6afd643306d34786e8abfa2805" %}
 
 package:
   name: {{ name|lower }}
@@ -25,7 +25,7 @@ requirements:
     - python >={{ python_min }}
     - numpy
     - scipy
-    - pandas >=0.24.0
+    - pandas >=0.24.0,<3
     - networkx >=1.10
     - pycountry
     - country_converter
