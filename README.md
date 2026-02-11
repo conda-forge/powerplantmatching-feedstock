@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/powerplantmatch
 
 Home: https://github.com/PyPSA/powerplantmatching
 
-Package license: GPL-3.0
+Package license: MIT
 
 Summary: Toolset for generating and managing Power Plant Data
 
