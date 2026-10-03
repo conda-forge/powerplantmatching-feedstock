@@ -1,13 +1,13 @@
 {% set name = "powerplantmatching" %}
-{% set version = "0.8.1" %}
-{% set sha256 = "dc38658b86b6599a99a53cdbeb1e39167bd8aa6afd643306d34786e8abfa2805" %}
+{% set version = "0.9.0" %}
+{% set sha256 = "6820f5fcf54caf34e872536780b1a44b5c05d2c998415ac1e307ddcd477c5103" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/powerplantmatching-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/powerplantmatching-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -22,10 +22,12 @@ requirements:
     - setuptools-scm >=8
     - pip
   run:
+    - plotly >=6.9.0
+    - pre-commit >=4.3.0
     - python >={{ python_min }}
     - numpy
     - scipy
-    - pandas >=0.24.0,<3
+    - pandas >=2.2.3,<4
     - networkx >=1.10
     - pycountry
     - country_converter
@@ -36,7 +38,7 @@ requirements:
     - matplotlib-base
     - geopy
     - unidecode
-    - entsoe-py >=0.3.1
+    - entsoe-py >=0.8
     - deprecation
     - tqdm
     - openpyxl
